@@ -5,7 +5,7 @@ import categories from '../data/categories';
 export default function Categories() {
   return (
     <motion.div
-      className="mt-11 w-[98%] ms-[1%] px-4 bg-gradient-to-r from-[#ade8f4] to-[#caf0f8] text-white shadow-2xl border-b border-white/10 rounded-b-3xl z-50 h-[60px]"
+      className="relative mt-10 pt-10 w-[98%] ms-[1%] px-4 bg-gradient-to-r from-[#ade8f4] to-[#caf0f8] text-white shadow-2xl border-b border-white/10 rounded-b-3xl z-40 h-auto py-4 hidden lg:block"
       initial={{ y: -50, opacity: 0 }}
       animate={{
         y: 0,
@@ -13,19 +13,28 @@ export default function Categories() {
         transition: { duration: 0.6, ease: 'easeOut' },
       }}
     >
-      <div className="flex space-x-4 mt-2 pt-6 text-gray-900 ">
-        <div className="flex justify-center items-center gap-2">
-          <p className="font-medium">Categories</p>
+      <div className="flex flex-wrap md:flex-nowrap justify-start items-center gap-4">
+        <motion.div
+          className="flex items-center gap-2 text-gray-900"
+          whileHover={{ scale: 1.1 }}
+        >
+          <p className="font-semibold text-lg">Categories</p>
           <MoveRight className="pt-1" />
-        </div>
-        <div className="flex justify-between items-center space-x-4 w-full pt-1 pe-3">
+        </motion.div>
+
+        <div className="flex flex-wrap justify-around gap-3 w-full">
           {categories.map((category) => (
-            <button
+            <motion.button
               key={category.id}
-              className="text-sm font-medium tracking-wide text-gray-900 hover:text-gray-700 transition duration-300"
+              className="px-4 py-2 text-sm md:text-md font-medium tracking-wide text-gray-900 bg-white rounded-lg shadow-md hover:bg-gray-100 hover:shadow-lg cursor-pointer"
+              whileHover={{
+                scale: 1.1,
+                boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.2)',
+              }}
+              whileTap={{ scale: 0.95 }}
             >
               {category.name}
-            </button>
+            </motion.button>
           ))}
         </div>
       </div>

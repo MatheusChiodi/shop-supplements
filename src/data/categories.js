@@ -21,18 +21,10 @@ const categories = [
   },
   {
     id: 6,
-    name: 'Pre-Workout',
-  },
-  {
-    id: 7,
     name: 'Vitamins',
   },
   {
-    id: 8,
-    name: 'Protein Bars',
-  },
-  {
-    id: 9,
+    id: 6,
     name: 'Accessories',
   },
 ];
