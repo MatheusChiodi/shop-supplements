@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 import Loading from '../components/Loading';
 import NavBar from '../components/NavBar';
+import Categories from '../components/Categories';
 import ScrollToTopButton from '../components/ScrollToTopButton';
 
 function HomePage() {
@@ -34,6 +35,7 @@ function HomePage() {
       {visibleLoading && <Loading />}
 
       <NavBar />
+      <Categories />
 
       <ScrollToTopButton />
     </>
