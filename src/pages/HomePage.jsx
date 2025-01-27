@@ -4,6 +4,7 @@ import Loading from '../components/Loading';
 import NavBar from '../components/NavBar';
 import Categories from '../components/Categories';
 import ScrollToTopButton from '../components/ScrollToTopButton';
+import SlideWallpaper from '../components/SlideWallpaper';
 
 function HomePage() {
   const [visibleLoading, setVisibleLoading] = useState(false);
@@ -36,6 +37,7 @@ function HomePage() {
 
       <NavBar />
       <Categories />
+      <SlideWallpaper />
 
       <ScrollToTopButton />
     </>
