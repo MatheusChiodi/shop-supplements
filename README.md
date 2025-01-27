@@ -1,49 +1,30 @@
-# 🚀 Meu Portfólio - ReactJS
+# 🏋️‍♂️ Supplement Store Layout - Base Design
 
----
+This project is a **base layout** for a supplement store, designed to provide an intuitive and visually appealing experience for customers looking for high-quality fitness products.
 
-👋 Olá! Com **mais de 2 anos de experiência** na área de desenvolvimento, venho aprimorando minhas habilidades e me dedicando a oferecer soluções tecnológicas eficientes.
+## 🌟 Features
 
----
+- **Modern UI/UX** → Clean and professional design tailored for supplement stores.
+- **Fully Responsive** → Works on all devices (desktop, tablet, mobile).
+- **Navigation Bar** → Includes search functionality and shopping cart.
+- **Product Carousels** → Showcases Whey Protein, Creatine, and Accessories.
+- **Interactive Elements** → Animated buttons, hover effects, and 3D visual enhancements.
+- **Smooth Animations** → Implemented with `Framer Motion` for an elegant transition experience.
+- **Dark and Light Theme Ready** → Can be adapted to different branding styles.
+- **Optimized for Performance** → Built with best practices for speed and usability.
 
-## 🛠️ Habilidades Técnicas
+## 🎨 About the Design
 
-- **PHP** & **Codeigniter**: Desenvolvimento robusto no back-end.
-  
-- **MySQL**: Gerenciamento de banco de dados otimizado.
-  
-- **HTML, CSS & JavaScript**: Criação de interfaces atrativas e funcionais.
-  
-- **ReactJS & React Native**: Atualmente aprofundando meus conhecimentos para desenvolvimento front-end de alta qualidade.
+This layout was **designed by MChiodi**, following modern UI trends for supplement e-commerce websites. The goal is to provide a **base structure** that can be **customized according to client preferences**.
 
----
+## 📌 Technologies Used
 
-## 🎯 Objetivos
+- **React.js** → Component-based architecture for modular development.
+- **Framer Motion** → Smooth animations and interactive elements.
+- **Tailwind CSS** → Fast and efficient styling with responsive design.
+- **Lucide Icons** → Modern icons for better UI representation.
+- **React Router** → Navigation between pages.
 
-Como um **entusiasta da tecnologia**, meu principal objetivo é encontrar uma oportunidade que me permita demonstrar, por meio do meu desempenho, todo o conhecimento e paixão que venho acumulando ao longo dos anos.
+## 🎯 Purpose of This Project
 
----
-
-### 🌐 Projetos
-
-Aqui você encontrará alguns dos projetos que desenvolvi, demonstrando minhas habilidades em ação. Sinta-se à vontade para explorá-los!
-
-## 📱 Alguns Aplicativos
-
-- [**Futuro Garantido**](https://play.google.com/store/apps/details?id=com.matheuschiodi.FuturoGarantido)
-- [**Diversão em Dupla: Jogos para Dois**](https://play.google.com/store/apps/details?id=com.matheuschiodi.dualgame)
-- [**Pomodoro Prime Timer**](https://play.google.com/store/apps/details?id=com.matheuschiodi.PomodoroPrimeTimer)
-- [**MChiodi - Training Record**](https://play.google.com/store/apps/details?id=com.matheuschiodi.TrainingRecord)
-
-## 🌐 Alguns Sites
-
-- [**Projeto Windows**](https://matheuschiodi.github.io/windows/)
-- [**Projeto Loja**](https://matheuschiodi.github.io/Project-Shop/)
-- [**Jogo da Velha**](https://matheuschiodi.github.io/tic-tac-toe/)
-- [**NLW Spacetime**](https://matheuschiodi.github.io/NLW-Spacetime-not-Prisma/)
-
-  
----
-
-📥 Para qualquer dúvida, feedback ou oportunidades, sinta-se à vontade para entrar em contato!
-
+This is a **template layout** to showcase different **design options** for supplement stores. Clients can explore the design and decide which **style suits their business needs**.
