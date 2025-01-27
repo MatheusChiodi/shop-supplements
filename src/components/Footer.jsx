@@ -11,7 +11,7 @@ import {
 export default function Footer() {
   return (
     <motion.footer
-      className="relative w-[98%] left-[1%] bg-gradient-to-r from-gray-900 to-gray-800 text-white px-6 py-8 mt-10 rounded-t-3xl shadow-2xl"
+      className="relative w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white px-6 py-8 mt-10 rounded-t-3xl shadow-2xl"
       initial={{ y: 50, opacity: 0 }}
       animate={{
         y: 0,
@@ -66,7 +66,9 @@ export default function Footer() {
         </div>
 
         <div className="w-full md:w-1/3 flex flex-col gap-3">
-          <h3 className="text-lg font-semibold text-[#00CFFD] md:text-left text-center">Contact</h3>
+          <h3 className="text-lg font-semibold text-[#00CFFD] md:text-left text-center">
+            Contact
+          </h3>
           <motion.div
             className="flex items-center gap-2 text-gray-400 md:justify-start justify-center"
             whileHover={{ scale: 1.05 }}

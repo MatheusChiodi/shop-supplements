@@ -2,13 +2,14 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Menu, X, ShoppingCart } from 'lucide-react';
+import Button from './Button';
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 w-[98%] left-[1%] bg-gradient-to-r from-[#141E30] to-[#243B55] text-white shadow-2xl border-b border-white/10 rounded-3xl z-50"
+      className="fixed top-0 left-0 w-full bg-gradient-to-r from-[#141E30] to-[#243B55] text-white shadow-2xl border-b border-white/10 rounded-b-3xl z-50"
       initial={{ y: -50, opacity: 0 }}
       animate={{
         y: 0,
@@ -16,7 +17,7 @@ export default function NavBar() {
         transition: { duration: 0.6, ease: 'easeOut' },
       }}
     >
-      <div className="flex lg:justify-between justify-between items-center h-16 px-4 lg:px-10">
+      <div className="max-w-[1920px] mx-auto flex lg:justify-between justify-between items-center h-16 px-4 lg:px-10">
         {/* Logo com efeito 3D */}
         <motion.div
           className="flex items-center space-x-2"
@@ -48,53 +49,77 @@ export default function NavBar() {
             type="text"
             className="bg-[#fff] text-[#03045e] p-3 rounded-lg shadow-inner w-[320px] placeholder-gray-400 focus:ring-2 focus:ring-[#00CFFD] focus:outline-none transition"
             placeholder="🔍 Search products..."
-            
           />
 
-          <motion.div className="flex space-x-6">
-            <Link
-              to=""
-              className="relative text-lg font-semibold tracking-wider text-white hover:text-[#00CFFD] transition duration-300"
+          <motion.div
+            className="flex space-x-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { delay: 0.6 } }}
+          >
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, transition: { delay: 0.6 } }}
             >
-              <span className="absolute left-0 bottom-0 w-0 h-1 bg-[#00CFFD] transition-all duration-300 group-hover:w-full"></span>
-              Shop
-            </Link>
-
-            <Link
-              to=""
-              className="relative text-lg font-semibold tracking-wider text-white hover:text-[#00CFFD] transition duration-300"
+              <Link
+                to=""
+                className="relative text-lg font-semibold tracking-wider text-white hover:text-[#00CFFD] transition duration-300"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, transition: { delay: 0.6 } }}
+              >
+                <span className="absolute left-0 bottom-0 w-0 h-1 bg-[#00CFFD] transition-all duration-300 group-hover:w-full"></span>
+                Shop
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, transition: { delay: 0.7 } }}
             >
-              About
-            </Link>
-
-            <Link
-              to=""
-              className="relative text-lg font-semibold tracking-wider text-white hover:text-[#00CFFD] transition duration-300"
+              <Link
+                to=""
+                className="relative text-lg font-semibold tracking-wider text-white hover:text-[#00CFFD] transition duration-300"
+              >
+                About
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, transition: { delay: 0.8 } }}
             >
-              Contact
-            </Link>
+              <Link
+                to=""
+                className="relative text-lg font-semibold tracking-wider text-white hover:text-[#00CFFD] transition duration-300"
+              >
+                Contact
+              </Link>
+            </motion.div>
           </motion.div>
 
-          <div className="flex items-center space-x-6">
-            <Link
-              to=""
-              className="px-5 py-2 bg-[#00CFFD] text-white rounded-xl font-semibold shadow-lg hover:scale-105 transition duration-300"
-            >
-              Register / Login
-            </Link>
+          <motion.div
+            className="flex items-center space-x-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { delay: 0.9 } }}
+          >
+            <Button title="Register / Login" />
 
             <motion.div
               whileHover={{ scale: 1.2 }}
               className="p-2 rounded-full bg-white text-gray-800 shadow-lg cursor-pointer"
+              initial={{ opacity: 0, scale: 0.5, y: 20 }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+                y: 0,
+                transition: { delay: 1 },
+              }}
             >
               <ShoppingCart size={24} />
             </motion.div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Botão do Menu Mobile */}
         <motion.button
-          className="lg:hidden p-2 rounded-full bg-[#00CFFD] text-white shadow-lg"
+          className="lg:hidden p-2 rounded-full bg-[#00CFFD] text-white shadow-lg hover:bg-[#008fc7] transition-all cursor-pointer"
           onClick={() => setMenuOpen(!menuOpen)}
           whileTap={{ scale: 0.9 }}
         >
@@ -136,7 +161,7 @@ export default function NavBar() {
 
           <Link
             to="/login"
-            className="px-6 py-3 bg-[#00CFFD] text-white rounded-xl font-semibold shadow-lg hover:scale-105 transition duration-300"
+            className="px-6 py-3 bg-[#00CFFD] text-white rounded-xl font-semibold shadow-lg hover:scale-105 hover:bg-[#008fc7] transition-all cursor-pointer"
           >
             Register / Login
           </Link>

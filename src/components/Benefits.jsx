@@ -47,24 +47,23 @@ export default function Benefits() {
         transition: { duration: 0.6, ease: 'easeOut' },
       }}
     >
-      <div className="flex items-center lg:justify-start justify-center gap-4">
+      <div className="flex items-center justify-center gap-4">
         <h2 className="text-[24px] md:text-[28px] lg:text-[36px] xl:text-[48px] text-center md:text-left mb-5 font-extrabold text-gray-900 drop-shadow-2xl">
           Benefits and Perks
         </h2>
         <BadgePlus
           size={40}
-          className="text-[#00CFFD] hidden md:block mt-[-10px]"
+          className="text-[#00CFFD] mt-[-10px]"
         />
       </div>
 
-      <div className="flex flex-wrap gap-6 justify-between items-center">
+      <div className="flex gap-6 justify-between gap-4 overflow-x-auto overflow-y-hidden scroll-smooth px-1 py-4 no-scrollbar">
         {benefits.map((benefit) => (
           <motion.div
             key={benefit.id}
-            className="flex flex-col items-center justify-center gap-4 border border-gray-200 rounded-2xl shadow-lg p-6 w-full max-w-[180px] min-h-[200px] bg-white relative cursor-pointer"
+            className="flex flex-col items-center justify-center gap-4 border border-gray-200 rounded-2xl p-6 w-full min-w-[180px] min-h-[200px] bg-white relative cursor-pointer"
             whileHover={{
               scale: 1.05,
-              boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.2)',
             }}
           >
             <motion.div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#00CFFD] to-[#00F5D4] text-white rounded-full shadow-md">

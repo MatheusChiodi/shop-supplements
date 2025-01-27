@@ -31,7 +31,7 @@ const ScrollToTopButton = () => {
           exit={{ opacity: 0, scale: 0.5, y: 20 }}
           whileHover={{
             scale: 1.05,
-            backgroundColor: '#ff5555',
+            backgroundColor: '#00CFFD',
             color: '#fff',
             boxShadow: '0 4px 12px rgba(0, 0, 0, 0.25)'
           }}

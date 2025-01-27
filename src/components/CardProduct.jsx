@@ -6,7 +6,7 @@ export default function CardProduct({product, key}) {
   return (
     <div
       key={key}
-      className="w-[220px] h-[280px] bg-white rounded-2xl flex flex-col items-center justify-center p-4 gap-3 border border-gray-200 relative"
+      className="min-w-[230px] h-[280px] bg-white rounded-2xl flex flex-col items-center justify-center p-4 gap-3 border border-gray-200 relative"
     >
       <motion.div
         className="text-3xl"
@@ -14,8 +14,8 @@ export default function CardProduct({product, key}) {
       >
         {product.icon}
       </motion.div>
-
-      <h3 className="text-lg font-semibold text-gray-900">{product.name}</h3>
+      
+      <h3 className="text-[17px]">{product.name}</h3>
       <p className="text-[#00CFFD] text-md font-bold">{product.price}</p>
 
       <ul className="text-gray-600 text-sm text-center">

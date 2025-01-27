@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
-import { MoveRight, ShoppingCart, Star } from 'lucide-react';
+import { MoveRight, Star } from 'lucide-react';
 import { useRef } from 'react';
 import products from '../data/products';
+import CardProduct from './CardProduct';
 
 export default function Wheys() {
   const carouselRef = useRef(null);
@@ -60,44 +61,7 @@ export default function Wheys() {
             className="flex gap-4 overflow-x-auto scroll-smooth whitespace-nowrap px-1 no-scrollbar"
           >
             {products.map((product) => (
-              <div
-                key={product.id}
-                className="w-[220px] h-[280px] bg-white rounded-2xl flex flex-col items-center justify-center p-4 gap-3 border border-gray-200 relative"
-              >
-                <motion.div
-                  className="text-3xl"
-                  whileHover={{ scale: 1.2, rotateY: [0, 10, -10, 0] }}
-                >
-                  {product.icon}
-                </motion.div>
-
-                <h3 className="text-lg font-semibold text-gray-900">
-                  {product.name}
-                </h3>
-                <p className="text-[#00CFFD] text-md font-bold">
-                  {product.price}
-                </p>
-
-                <ul className="text-gray-600 text-sm text-center">
-                  {product.benefits.map((benefit, index) => (
-                    <li
-                      key={index}
-                      className="flex items-center justify-center"
-                    >
-                      <Star size={14} className="text-yellow-400 mr-1" />{' '}
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-
-                <motion.button
-                  className="mt-2 bg-[#00CFFD] text-white font-bold py-2 px-5 rounded-lg shadow-lg hover:bg-[#008fc7] transition-all cursor-pointer"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Buy Now
-                </motion.button>
-              </div>
+              <CardProduct product={product} key={product.id} />
             ))}
           </div>
         </div>

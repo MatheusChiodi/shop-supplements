@@ -9,11 +9,10 @@ import Benefits from '../components/Benefits';
 import Wheys from '../components/Wheys';
 import Creatine from '../components/Creatine';
 import Footer from '../components/Footer';
+import Accessories from '../components/Accessories';
 
 function HomePage() {
   const [visibleLoading, setVisibleLoading] = useState(false);
-  const [visibleContent, setVisibleContent] = useState(false);
-  const [visibleFooter, setVisibleFooter] = useState(false);
 
   useEffect(() => {
     const lastVisit = localStorage.getItem('lastVisit');
@@ -26,17 +25,13 @@ function HomePage() {
 
       setTimeout(() => {
         setVisibleLoading(false);
-        setVisibleContent(true);
+       
       }, 1300);
-    } else {
-      setVisibleContent(true);
-    }
-
-    setTimeout(() => setVisibleFooter(true), 5000);
+    } 
   }, []);
 
   return (
-    <>
+    <div className='mx-auto max-w-[1920px]'>
       {visibleLoading && <Loading />}
       <NavBar />
       <Categories />
@@ -44,9 +39,10 @@ function HomePage() {
       <Benefits />
       <Wheys />
       <Creatine />
+      <Accessories />
       <Footer />
       <ScrollToTopButton />
-    </>
+    </div>
   );
 }
 
