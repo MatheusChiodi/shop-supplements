@@ -46,12 +46,9 @@ export default function NavBar() {
         <div className="hidden lg:flex items-center space-x-8 w-[100%] mx-auto justify-between">
           <motion.input
             type="text"
-            className="bg-[#fff] text-white p-3 rounded-lg shadow-inner w-[320px] placeholder-gray-400 focus:ring-2 focus:ring-[#00CFFD] focus:outline-none transition"
+            className="bg-[#fff] text-[#03045e] p-3 rounded-lg shadow-inner w-[320px] placeholder-gray-400 focus:ring-2 focus:ring-[#00CFFD] focus:outline-none transition"
             placeholder="🔍 Search products..."
-            whileFocus={{
-              scale: 1.05,
-              boxShadow: '0 0 10px rgba(0, 149, 199, 0.8)',
-            }}
+            
           />
 
           <motion.div className="flex space-x-6">
@@ -67,7 +64,7 @@ export default function NavBar() {
               to=""
               className="relative text-lg font-semibold tracking-wider text-white hover:text-[#00CFFD] transition duration-300"
             >
-              About Us
+              About
             </Link>
 
             <Link
@@ -126,7 +123,7 @@ export default function NavBar() {
               to="/about"
               className="text-xl font-semibold tracking-wide hover:text-[#00CFFD] transition duration-300"
             >
-              ℹ️ About Us
+              ℹ️ About
             </Link>
 
             <Link
