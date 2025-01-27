@@ -7,6 +7,7 @@ import ScrollToTopButton from '../components/ScrollToTopButton';
 import SlideWallpaper from '../components/SlideWallpaper';
 import Benefits from '../components/Benefits';
 import Wheys from '../components/Wheys';
+import Creatine from '../components/Creatine';
 
 function HomePage() {
   const [visibleLoading, setVisibleLoading] = useState(false);
@@ -42,6 +43,7 @@ function HomePage() {
       <SlideWallpaper />
       <Benefits />
       <Wheys />
+      <Creatine />
       <ScrollToTopButton />
     </>
   );
