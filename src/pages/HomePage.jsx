@@ -5,6 +5,7 @@ import NavBar from '../components/NavBar';
 import Categories from '../components/Categories';
 import ScrollToTopButton from '../components/ScrollToTopButton';
 import SlideWallpaper from '../components/SlideWallpaper';
+import Benefits from '../components/Benefits';
 
 function HomePage() {
   const [visibleLoading, setVisibleLoading] = useState(false);
@@ -38,7 +39,7 @@ function HomePage() {
       <NavBar />
       <Categories />
       <SlideWallpaper />
-
+      <Benefits />
       <ScrollToTopButton />
     </>
   );
