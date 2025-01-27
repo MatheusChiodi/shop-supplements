@@ -8,6 +8,7 @@ import SlideWallpaper from '../components/SlideWallpaper';
 import Benefits from '../components/Benefits';
 import Wheys from '../components/Wheys';
 import Creatine from '../components/Creatine';
+import Footer from '../components/Footer';
 
 function HomePage() {
   const [visibleLoading, setVisibleLoading] = useState(false);
@@ -37,13 +38,13 @@ function HomePage() {
   return (
     <>
       {visibleLoading && <Loading />}
-
       <NavBar />
       <Categories />
       <SlideWallpaper />
       <Benefits />
       <Wheys />
       <Creatine />
+      <Footer />
       <ScrollToTopButton />
     </>
   );
