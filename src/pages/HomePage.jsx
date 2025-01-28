@@ -13,6 +13,7 @@ import Accessories from '../components/Accessories';
 
 function HomePage() {
   const [visibleLoading, setVisibleLoading] = useState(false);
+  const [visibleContent, setVisibleContent] = useState(false);
 
   useEffect(() => {
     const lastVisit = localStorage.getItem('lastVisit');
@@ -25,23 +26,29 @@ function HomePage() {
 
       setTimeout(() => {
         setVisibleLoading(false);
-       
+        setVisibleContent(true);
       }, 1300);
-    } 
+    } else {
+      setVisibleContent(true);
+    }
   }, []);
 
   return (
-    <div className='mx-auto max-w-[1920px]'>
+    <div className="mx-auto max-w-[1920px]">
       {visibleLoading && <Loading />}
-      <NavBar />
-      <Categories />
-      <SlideWallpaper />
-      <Benefits />
-      <Wheys />
-      <Creatine />
-      <Accessories />
-      <Footer />
-      <ScrollToTopButton />
+      {visibleContent && (
+        <>
+          <NavBar />
+          <Categories />
+          <SlideWallpaper />
+          <Benefits />
+          <Wheys />
+          <Creatine />
+          <Accessories />
+          <Footer />
+          <ScrollToTopButton />
+        </>
+      )}
     </div>
   );
 }

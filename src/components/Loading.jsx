@@ -10,7 +10,7 @@ export default function Loading() {
   }, []);
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-950">
+    <div className="absolute z-[100] w-full flex justify-center items-center h-screen bg-gray-950">
       <img src={`./logo.png`} alt="Loading" className="w-72 h-62" />
     </div>
   );
