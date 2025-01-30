@@ -5,7 +5,7 @@ import categories from '../data/categories';
 export default function Categories() {
   return (
     <motion.div
-      className="fixed top-6 left-0 pb-3 pt-[50px] px-5 w-full bg-[#00CFFD] text-white shadow-2xl border-b border-white/10 rounded-b-3xl z-40 lg:block hidden"
+      className="fixed top-6 left-0  w-full  border-b border-white/10 rounded-b-3xl z-40 lg:block hidden overflow-hidden"
       initial={{ y: -50, opacity: 0 }}
       animate={{
         y: 0,
@@ -13,7 +13,7 @@ export default function Categories() {
         transition: { duration: 0.6, ease: 'easeOut' },
       }}
     >
-      <div className="max-w-[1920px] mx-auto  flex flex-wrap md:flex-nowrap justify-start items-center gap-4">
+      <div className="max-w-[1920px] bg-[#00CFFD] pb-3 pt-[50px] px-5 text-white shadow-2xl mx-auto flex flex-wrap md:flex-nowrap justify-start items-center gap-4">
         <motion.div
           className="flex items-center gap-2 text-gray-900"
           whileHover={{ scale: 1.1 }}

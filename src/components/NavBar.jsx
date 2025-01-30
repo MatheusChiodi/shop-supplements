@@ -9,7 +9,7 @@ export default function NavBar() {
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 w-full bg-gradient-to-r from-[#141E30] to-[#243B55] text-white shadow-2xl border-b border-white/10 rounded-b-3xl z-50"
+      className="fixed top-0 left-0 w-full border-b border-white/10 rounded-b-3xl overflow-hidden z-50"
       initial={{ y: -50, opacity: 0 }}
       animate={{
         y: 0,
@@ -17,7 +17,7 @@ export default function NavBar() {
         transition: { duration: 0.6, ease: 'easeOut' },
       }}
     >
-      <div className="max-w-[1920px] mx-auto flex lg:justify-between justify-between items-center h-16 px-4 lg:px-10">
+      <div className="max-w-[1920px] bg-gradient-to-r from-[#141E30] to-[#243B55] text-white shadow-2xl mx-auto flex lg:justify-between justify-between items-center h-16 px-4 lg:px-10">
         {/* Logo com efeito 3D */}
         <motion.div
           className="flex items-center space-x-2"
